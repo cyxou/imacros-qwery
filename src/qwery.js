@@ -4,17 +4,14 @@
   else context[name] = definition()
 })('qwery', this, function () {
 
-  var classOnly = /^\.([\w\-]+)$/
-    , doc = document
-    , win = window
-    , html = doc.documentElement
-    , nodeType = 'nodeType'
-  var isAncestor = 'compareDocumentPosition' in html ?
+  var classOnly = /^\.([\w\-]+)$/;
+  var nodeType = 'nodeType';
+  var isAncestor = 'compareDocumentPosition' in window.document.documentElement ?
     function (element, container) {
       return (container.compareDocumentPosition(element) & 16) == 16
     } :
     function (element, container) {
-      container = container == doc || container == window ? html : container
+      container = container == window.document || container == window ? window.document.documentElement : container
       return container !== element && container.contains(element)
     }
 
@@ -52,7 +49,7 @@
 
 
   function normalizeRoot(root) {
-    if (!root) return doc
+    if (!root) return window.document
     if (typeof root == 'string') return qwery(root)[0]
     if (!root[nodeType] && arrayLike(root)) return root[0]
     return root
@@ -66,13 +63,13 @@
   function qwery(selector, opt_root) {
     var m, root = normalizeRoot(opt_root)
     if (!root || !selector) return []
-    if (selector === win || isNode(selector)) {
-      return !opt_root || (selector !== win && isNode(root) && isAncestor(selector, root)) ? [selector] : []
+    if (selector === window || isNode(selector)) {
+      return !opt_root || (selector !== window && isNode(root) && isAncestor(selector, root)) ? [selector] : []
     }
     if (selector && arrayLike(selector)) return flatten(selector)
 
 
-    if (doc.getElementsByClassName && selector == 'string' && (m = selector.match(classOnly))) {
+    if (window.document.getElementsByClassName && selector == 'string' && (m = selector.match(classOnly))) {
       return toArray((root).getElementsByClassName(m[1]))
     }
     // using duck typing for 'a' window or 'a' document (not 'the' window || document)
