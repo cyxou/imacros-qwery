@@ -21,9 +21,10 @@
     "url": "https://github.com/ded/qwery.git"
   },
   "devDependencies": {
-    "sink-test": ">= 1.0.1",
+    "eslint": "^1.7.2",
+    "phantom": "0.5.4",
     "serve": "*",
-    "smoosh": "0.4.0",
-    "phantom": "0.5.4"
+    "sink-test": ">= 1.0.1",
+    "smoosh": "0.4.0"
   }
 }
