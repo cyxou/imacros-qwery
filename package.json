@@ -1,24 +1,19 @@
 {
-  "name": "qwery",
-  "description": "blazing fast CSS3 query selector engine",
+  "name": "imacros-qwery",
+  "description": "blazing fast CSS3 query selector engine for iMacros",
   "version": "4.0.0",
   "homepage": "https://github.com/ded/qwery",
-  "author": "Dustin Diaz <dustin@dustindiaz.com> (http://dustindiaz.com)",
-  "contributors": [
-    "Rod Vagg (https://github.com/rvagg)",
-    "Andrew McCollum (https://github.com/amccollum)"
-  ],
+  "author": "Alex Sukhov",
   "main": "./qwery.js",
   "keywords": [
-    "ender",
+    "imacros",
     "query",
     "css",
     "selector engine"
   ],
-  "ender": "./src/ender.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ded/qwery.git"
+    "url": "https://github.com/cyxou/imacros-qwery.git"
   },
   "devDependencies": {
     "eslint": "^1.7.2",
