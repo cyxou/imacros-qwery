@@ -1,10 +1,10 @@
 {
   "name": "imacros-qwery",
-  "description": "blazing fast CSS3 query selector engine for iMacros",
+  "description": "blazing fast CSS3 query selector engine for iMacros. This is just a port of ded's qwery package. Thus all credits go to [him](http://github.com/ded)",
   "version": "4.0.0",
-  "homepage": "https://github.com/ded/qwery",
+  "homepage": "https://github.com/cyxou/imacros-qwery",
   "author": "Alex Sukhov",
-  "main": "./qwery.js",
+  "main": "./qwery.min.js",
   "keywords": [
     "imacros",
     "query",
@@ -16,10 +16,10 @@
     "url": "https://github.com/cyxou/imacros-qwery.git"
   },
   "devDependencies": {
-    "eslint": "^1.7.2",
-    "phantom": "0.5.4",
+    "eslint": "^2.8.0",
+    "phantom": "^2.0.10",
     "serve": "*",
     "sink-test": ">= 1.0.1",
-    "smoosh": "0.4.0"
+    "smoosh": "0.4.1"
   }
 }
